@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="ua">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <title>My Webpage</title>
+        <script>
+        let root = document.documentElement;
+let mover = document.querySelector(".mover");
+let link = document.querySelector(".btn");
+
+root.addEventListener("mousemove", (e) => {
+	root.style.setProperty("--mouse-x", e.clientX + "px");
+	root.style.setProperty("--mouse-y", e.clientY + "px");
+});
+
+link.addEventListener("click", function (event) {
+	event.preventDefault();
+	let svg = `<svg class="svg-2" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M27.5 18.5V1.5" stroke-linejoin="bevel"/>
+<path d="M18.5 26.5L1.5 26.5" stroke-linejoin="bevel"/>
+<path d="M27.5 36.5V53.5" stroke-linejoin="bevel"/>
+<path d="M36.5 26.5L53.5 26.5" stroke-linejoin="bevel"/>
+<path class="svg_obj" d="M21.8787 22L12.6863 12.8076" stroke-linejoin="bevel"/>
+<path class="svg_obj" d="M33 21.8789L42.1924 12.6865" stroke-linejoin="bevel"/>
+<path class="svg_obj" d="M21 33.1211L11.8076 42.3135" stroke-linejoin="bevel"/>
+<path class="svg_obj" d="M33.1213 33L42.3137 42.1924" stroke-linejoin="bevel"/>
+</svg>`;
+
+	let x = event.offsetX == undefined ? event.layerX : event.offsetX,
+		y = event.offsetY == undefined ? event.layerY : event.offsetY;
+
+	let span = document.createElement("span");
+	span.className = "mouse";
+	span.innerHTML = svg;
+	s = span.style;
+	s.top = y + "px";
+	s.left = x + "px";
+	var angle = Math.floor(Math.random() * 25) + "deg";
+	s.transform = "rotate(" + angle + ")";
+	this.appendChild(span);
+
+	setTimeout(function () {
+		span.remove();
+	}, 1400);
+
+	mover.classList.add("active");
+	setTimeout(function () {
+		mover.classList.remove("active");
+	}, 250);
+});
+        </script>
+    </head>
+    <body>
+        <hr>
+        <div class='up'>
+            <img src="https://blogscdn.thehut.net/app/uploads/sites/417/2020/10/%D0%B9%D0%BE%D0%B3%D0%B0-%D0%B4%D0%BB%D1%8F-%D1%80%D0%B0%D1%81%D1%81%D0%BB%D0%B0%D0%B1%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_1603093078.jpg" class="img-fluid" alt="yoga"style="max-width: 75%; height: auto;padding: 10px;">
+            <hr>
+            <h2>Зазвичай ми настільки закручуємось у побуті, якихось справах, новинах, що забуваємо по-справжньому жити.<br> Деяким вдається помітити це вчасно, в той час як інші озираються лише наприкінці життя.</h2>
+        </div>
+        <hr>
+        <div>
+            <h5>Привіт! Мене звати Марина, і я намагаюсь озиратись кожен день.</h5>
+            <img src="C:\Users\MarinaPC\.vscode\projects\65777699\homepage\photo\photo_2020-12-09_13-25-04.jpg" class="img-fluid" alt="Marina" style="max-width: 25%; height: auto;padding: 10px;"">
+            <p class="up">Давай трохи познайомимось. Я розповім, що мене надихає, що приносить радість (спойлер - тут буде пес) і покажу чого я навчилась за тиждень вивчення css, html i JS.</p>
+        </div>
+        <hr>
+
+
+        <div class="dropdown">
+            <a href="dog.html"><button class="btn" type="button"><span class="btn_text">Подивитись що то за радість</span></button></a>
+            <a href="hobbies.html"><button class="btn" type="button"><span class="btn_text">Дізнатись які в мене хоббі</span></button></a>
+        </div>
+     
+        
+    </body>
+</html>

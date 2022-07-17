@@ -1,0 +1,114 @@
+.up{
+    text-align: center;
+    padding: 10px 20px 10px 20px;
+    font: italic 1.2em "Fira Sans", serif;
+}
+
+.title{
+    display: inline-block;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000
+}
+
+.discribe{
+    text-align: center;
+    text-indent: 50px;
+}
+
+body{
+    background-color: #F5EEF8;
+    text-align: center;
+    font-size: 18px;
+    height: 100%;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    font-family: "Fira Sans", cursive;
+    font-weight: 400;
+}
+
+div {
+    padding: 25px 50px 25px 100px;
+}
+
+button{
+    background-color: #dacbf7;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 0.375rem 0.75rem;
+    text-align: center;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    vertical-align: middle;
+}
+
+
+.btn {
+  appearance: none;
+  outline: 0;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  letter-spacing: 2px;
+  height: 60px;
+  width: 250px;
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 0.375rem 0.75rem;
+  color: #fff;
+  background-color: #a79dfd;
+  border-radius: 0.25rem;
+  transition: all 0.3s ease-in;
+}
+.btn_text {
+  pointer-events: none;
+  position: relative;
+  z-index: 2;
+}
+.btn:hover {
+  background-color: #70a6db;
+}
+
+.mouse {
+  pointer-events: none;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  left: var(--mouse-btn-x);
+  top: var(--mouse-btn-y);
+}
+.mouse .svg-2 {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: -40px;
+  left: -40px;
+  opacity: 0.7;
+}
+.mouse .svg-2 path {
+  stroke: #1A1D2C;
+  stroke: #A0C3F1;
+  stroke: #bdd5ff;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-dashoffset: 25%;
+  stroke-dasharray: 100%;
+  animation: svg2 1s linear forwards;
+}
+.mouse .svg-2 .svg_obj {
+  stroke-width: 5;
+  opacity: 0.5;
+}
